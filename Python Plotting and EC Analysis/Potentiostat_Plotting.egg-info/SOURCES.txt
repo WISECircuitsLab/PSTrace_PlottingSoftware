@@ -1,0 +1,9 @@
+README.md
+setup.py
+Potentiostat_Plotting/__init__.py
+Potentiostat_Plotting/myfunctions.py
+Potentiostat_Plotting.egg-info/PKG-INFO
+Potentiostat_Plotting.egg-info/SOURCES.txt
+Potentiostat_Plotting.egg-info/dependency_links.txt
+Potentiostat_Plotting.egg-info/top_level.txt
+test/test_myfunction.py
