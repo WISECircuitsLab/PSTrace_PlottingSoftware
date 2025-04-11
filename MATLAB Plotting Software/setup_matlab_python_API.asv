@@ -1,0 +1,40 @@
+%% Check Python Environment:
+% Check the current Python environment
+pe = pyenv;
+
+% Display the information
+disp(pe)
+
+%% Force Python Initialization:
+% Check if Python is loaded
+if pe.Status == "NotLoaded"
+    % Try to reload the Python environment
+    pyenv('ExecutionMode', 'OutOfProcess'); % Try using OutOfProcess mode
+    pe = pyenv;
+    disp(pe);
+end
+
+
+%%
+% Example for setting Python 3.8 (replace with your actual Python version and path)
+pyenv('Version', '/Applications/anaconda3/bin/python');
+pyenv('Version', '/Applications/Python 3.10')
+
+% Verify the configuration
+pyenv
+
+%%
+% Run a simple Python command
+pyversion % This should output the current Python version and configuration
+
+%% Force Python Initalization
+% Run a simple Python command to load the environment
+try
+    py.print('Hello from Python');
+catch ME
+    disp(ME.message);
+end
+
+% Check the Python environment status again
+pe = pyenv;
+disp(pe);
